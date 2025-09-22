@@ -5,7 +5,7 @@ def longest_ascending_sequence(lst):
     for i in range(len(lst)):
         if i == 0 or lst[i] > lst[i - 1]:
             current_seq.append(lst[i])
-        else:
+        else:                                                 
             if len(current_seq) > len(longest_seq):
                 longest_seq = current_seq
             current_seq = [lst[i]]
