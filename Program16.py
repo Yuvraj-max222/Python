@@ -1,14 +1,15 @@
-def count_words_in_file(filename):
-    word_counts = {}
-    with open(filename, 'r') as file:
-        words = file.read().split()
-        for word in words:
-            if word in word_counts:
-                word_counts[word] += 1
-            else:
-                word_counts[word] = 1
-    return word_counts
-filename = 'python.txt'
-word_counts = count_words_in_file(filename)
-for word, count in word_counts.items():
-    print(f"'{word}': {count}")
+# Program to count occurrences of every word in a text file
+def count_words(filename):
+    word_count = {}
+    with open(filename, 'r', encoding='utf-8') as file:
+        for line in file:
+            words = line.strip().split()
+            for word in words:
+                word = word.lower().strip(".,!?;:\"'()[]{}")
+                if word:
+                    word_count[word] = word_count.get(word, 0) + 1
+    return word_count
+filename = "python.txt"
+counts = count_words(filename)
+for word, count in counts.items():
+    print(f"{word}: {count}")
