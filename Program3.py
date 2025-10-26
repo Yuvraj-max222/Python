@@ -10,7 +10,7 @@ def calculate_F(x):
     elif x <= 20:
         return 5 * x
     else:
-        return 2 * x**2 - x + 9 
+        return 2 * x**2 - x + 9
 try:
     x = float(input("Enter the value of x: "))
     result = calculate_F(x)
