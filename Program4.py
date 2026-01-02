@@ -1,19 +1,12 @@
 #Write a program to find the second largest number among three numbers using nested if else statement.
-a = input("Enter the first number: ")
-b = input("Enter the second number: ")
-c = input("Enter the third number: ")
-if a > b:
-    if a < c:
-        second = a
-    elif b > c:
-        second = b
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+if a >= b:
+    if a >= c:
+        if b >= c:
+            second_largest = b
+        else:
+            second_largest = c
     else:
-        second = c
-else:
-    if b < c:
-        second = b
-    elif a > c:
-        second = a
-    else:
-        second = c
-print(f"The second largest number is: {second}")
+        second_largest = a
