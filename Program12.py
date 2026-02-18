@@ -7,7 +7,7 @@ def word_frequency(s):
         if word in freq:
             freq[word] += 1
         else:
-            freq[word] = 1
+            freq[word] = 12
     return freq
 input_string = input("Enter a string: ")
 frequency = word_frequency(input_string)
