@@ -30,7 +30,7 @@ class BudgetAppEnhanced:
                  bg=COLORS["bg_main"], fg=COLORS["text_dark"]).pack(pady=(30, 20))
         input_frame = tk.Frame(root, bg=COLORS["bg_container"], bd=1, relief=tk.RIDGE)
         input_frame.pack(padx=30, fill="x")
-        tk.Label(input_frame, text="Set Monthly Budget ($)", font=FONTS["label"], 
+        tk.Label(input_frame, text="Set Monthly Budget ($)", font=FONTS["label"],
                  bg=COLORS["bg_container"], fg=COLORS["text_dark"]).pack(anchor="w", padx=20, pady=(20, 5))
         self.entry_budget = tk.Entry(input_frame, font=FONTS["entry"], bg="#ecf0f1", bd=0, highlightthickness=1)
         self.entry_budget.pack(padx=20, fill="x", ipady=5)
@@ -38,7 +38,7 @@ class BudgetAppEnhanced:
                             relief=tk.FLAT, bd=0, padx=20, pady=5, command=self.set_budget)
         btn_set.pack(pady=15)
         ttk.Separator(input_frame, orient='horizontal').pack(fill='x', padx=20, pady=10)
-        tk.Label(input_frame, text="Add New Expense ($)", font=FONTS["label"], 
+        tk.Label(input_frame, text="Add New Expense ($)", font=FONTS["label"],
                  bg=COLORS["bg_container"], fg=COLORS["text_dark"]).pack(anchor="w", padx=20, pady=(10, 5))
         self.entry_expense = tk.Entry(input_frame, font=FONTS["entry"], bg="#ecf0f1", bd=0, highlightthickness=1)
         self.entry_expense.pack(padx=20, fill="x", ipady=5)
@@ -47,9 +47,9 @@ class BudgetAppEnhanced:
         btn_add.pack(pady=(15, 30))
         dashboard_frame = tk.Frame(root, bg=COLORS["bg_main"])
         dashboard_frame.pack(padx=30, pady=30, fill="x")
-        tk.Label(dashboard_frame, text="Remaining Balance:", font=FONTS["label"], 
+        tk.Label(dashboard_frame, text="Remaining Balance:", font=FONTS["label"],
                  bg=COLORS["bg_main"], fg=COLORS["text_dark"]).pack()
-        self.label_balance = tk.Label(dashboard_frame, text="$0.00", font=FONTS["balance"], 
+        self.label_balance = tk.Label(dashboard_frame, text="$0.00", font=FONTS["balance"],
                                       bg=COLORS["bg_main"], fg=COLORS["text_dark"])
         self.label_balance.pack(pady=5)
         self.status_bar = tk.Label(root, text="Please set a budget to begin.", font=FONTS["message"], 
